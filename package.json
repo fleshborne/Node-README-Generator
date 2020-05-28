@@ -1,0 +1,23 @@
+{
+  "name": "node-readme-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "inquirer": "^6.5.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fleshborne/Node-README-Generator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fleshborne/Node-README-Generator/issues"
+  },
+  "homepage": "https://github.com/fleshborne/Node-README-Generator#readme"
+}
