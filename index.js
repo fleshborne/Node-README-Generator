@@ -58,23 +58,21 @@ const questions = [
 inquirer.prompt(questions).then((answers) => {
   response = answers;
   console.log(answers);
+  const markdownFile = answers + "Markdown" + ".md";
+  fs.writeFile(markdownFile, (err) => {
+    if (err) {
+      return console.log(err);
+    }
+
+    console.log("Success!");
+    // where do I want the file to be place? desktop? local directiory? do I need to check?
+    //create a file name fileName
+    //write to file fileName the data
+  });
 });
-function writeToFile(fileName, data) {
-  // where do I want the file to be place? desktop? local directiory? do I need to check?
-  //create a file name fileName
-  //write to file fileName the data
-}
+
 /*    
 
-// What is your Project title? [string]
-// What is your Description? [string]
-// What is your Table of Contents? [Array:string] or an object?
-// How to install: [string]
-// What is your Usage?
-// What is your License? "MIT"
-// Who are the contributors? [Array:strings]
-// What are your Tests? [string] (markdown formatted?)
-// What are your Questions [Array:string]
-    // What is your User Github profile picture? [string] (image:url)
-    // What is your User Github email? 
-    */
+// What is your User Github profile picture? [string] (image:url)
+// What is your User Github email? 
+*/
