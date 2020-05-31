@@ -25,7 +25,7 @@ const questions = [
   },
   {
     type: "input",
-    name: "install",
+    name: "Installation",
     message: "How does the user install your app?",
   },
   {
@@ -57,8 +57,8 @@ const questions = [
 ];
 inquirer.prompt(questions).then((answers) => {
   response = answers;
-  console.log(answers);
-  const markdownFile = answers + "Markdown" + ".md";
+  console.log(response);
+  const markdownFile = "Markdown" + { response } + ".md";
   fs.writeFile(markdownFile, JSON.stringify(answers, null, "\n"), (err) => {
     if (err) {
       return console.log(err);

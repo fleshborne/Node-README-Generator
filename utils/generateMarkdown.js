@@ -18,9 +18,18 @@
 
 function generateMarkdown(data) {
   return `
+# ${data.username}
 # ${data.title}
 # ${data.description}
+# ${data.contents}
+# ${data.installation}
+# ${data.usage}
+# ${data.license}
+# ${data.contributing}
+# ${data.tests}
+# ${data.questions}
 
+  
 `;
 }
 
