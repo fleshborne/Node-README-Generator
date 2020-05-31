@@ -59,7 +59,7 @@ inquirer.prompt(questions).then((answers) => {
   response = answers;
   console.log(answers);
   const markdownFile = answers + "Markdown" + ".md";
-  fs.writeFile(markdownFile, (err) => {
+  fs.writeFile(markdownFile, JSON.stringify(answers, null, "\n"), (err) => {
     if (err) {
       return console.log(err);
     }
