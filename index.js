@@ -58,8 +58,7 @@ const questions = [
 inquirer.prompt(questions).then((answers) => {
   response = answers;
   console.log(response);
-  const markdownFile = "Markdown" + { response } + ".md";
-  fs.writeFile(markdownFile, JSON.stringify(answers, null, "\n"), (err) => {
+  fs.writeFile("README.md", JSON.stringify(answers, null, "\n"), (err) => {
     if (err) {
       return console.log(err);
     }
