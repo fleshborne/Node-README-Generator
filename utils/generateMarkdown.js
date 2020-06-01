@@ -11,7 +11,7 @@ const emailMeBadge = () => {
 };
 // cited from : https://ecotrust-canada.github.io/markdown-toc/
 const tableOfContents = () => {
-  return `* [Description](#description)\n* [Installation](#install)\n* [Usage](#usage) [License](#license)\n* [Tests](#tests)\n* [Sources](#sources)\n* [Contributions](#contributions)\n* [Contact](#contact)`;
+  return `* [Description](#description)\n* [Installation](#install)\n* [Usage](#usage)\n* [License](#license)\n* [Tests](#tests)\n* [Sources](#sources)\n* [Contributions](#contributions)\n* [Contact](#contact)`;
 };
 async function generateMarkdown(answers) {
   // call github repo using axios to await answers and find users github profile

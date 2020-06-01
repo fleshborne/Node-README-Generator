@@ -5,7 +5,8 @@ Node README generator
 # TABLE OF CONTENTS
 * [Description](#description)
 * [Installation](#install)
-* [Usage](#usage) [License](#license)
+* [Usage](#usage)
+* [License](#license)
 * [Tests](#tests)
 * [Sources](#sources)
 * [Contributions](#contributions)
