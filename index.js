@@ -63,7 +63,7 @@ const questions = [
     name: "sources",
     message: "List your sources here, use commas to separate",
     default:
-      "https://openbase.io/js/inquirer, https://www.makeareadme.com/, https://github.com/Naereen/badges",
+      "https://openbase.io/js/inquirer, https://www.makeareadme.com/, https://github.com/Naereen/badges, https://ecotrust-canada.github.io/markdown-toc/",
   },
   {
     type: "input",

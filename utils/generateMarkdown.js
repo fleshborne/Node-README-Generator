@@ -3,6 +3,9 @@ const axios = require("axios");
 const markdownBadge = () => {
   return "[![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](http://commonmark.org)";
 };
+const swagBadge = () => {
+  return "[![built-with-swag](https://ForTheBadge.com/images/badges/built-with-swag.svg)](https://GitHub.com/Naereen/)";
+};
 const emailMeBadge = () => {
   return "[![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://GitHub.com/fleshborne)";
 };
@@ -35,7 +38,7 @@ ${answers.usage}
 # LICENSE 
 ${answers.license}
 
-# CONTRIBUTORS 
+# CONTRIBUTORS ${swagBadge()}
 ![profilePicture](${userPicture})
 \n${answers.contributions}
 
