@@ -4,7 +4,7 @@ const markdownBadge = () => {
   return "[![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](http://commonmark.org)";
 };
 const tableOfContents = () => {
-  return `* [Usage](#usage)\n* [Installation](#install)\n* [License](#license)\n* [Tests](#tests)\n* [Contributors](#contributors)\n* [Contact](#contact)`;
+  return `* [Usage](#usage)\n* [Installation](#install)\n* [License](#license)\n* [Contributors](#contributors)\n* [Tests](#tests)\n* [Sources](#sources)\n* [Contact](#contact)`;
 };
 async function generateMarkdown(answers) {
   // call github repo using axios to await answers and find users github profile
@@ -44,6 +44,9 @@ ${answers.contributions}
 # TESTS
 ${answers.tests}
 
+
+# SOURCES 
+${answers.sources}
 
 # Contact
 ${answers.email} 

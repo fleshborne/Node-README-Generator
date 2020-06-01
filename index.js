@@ -30,7 +30,8 @@ const questions = [
     type: "input",
     name: "installation",
     message: "How does the user install your app?",
-    default: "In terminal, run git clone ..., npm install to get dependencies",
+    default:
+      "In terminal, run `git clone git@github.com:fleshborne/Node-README-Generator.git`, then `npm install` to get dependencies",
   },
   {
     type: "input",
@@ -55,6 +56,11 @@ const questions = [
     name: "tests",
     message: "Do you have visuals of your app working?",
     default: "testing",
+  },
+  {
+    type: "input",
+    name: "sources",
+    message: "List your sources here, use commas to separate",
   },
   {
     type: "list",
