@@ -31,7 +31,7 @@ Blake Thompson
 
 # TESTS
 
-![Testing Gif](Assets\images\2020-06-01_13-24-36.gif)
+![Testing Gif](https://github.com/fleshborne/Node-README-Generator/blob/master/Assets/images/2020-06-01_13-24-36.gif)
 
 # Contact
 
