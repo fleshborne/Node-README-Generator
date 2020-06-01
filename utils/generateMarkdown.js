@@ -1,36 +1,56 @@
-/*
-// The README will be populated with the following:
+const axios = require("axios");
 
-// At least one badge
-// Project title
-// Description
-// Table of Contents
-// Installation
-// Usage
-// License
-// Contributing
-// Tests
-// Questions
+const markdownBadge = () => {
+  return "[![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](http://commonmark.org)";
+};
+async function generateMarkdown(answers) {
+  // call github repo using axios to await answers and find users github profile
 
-// User GitHub profile picture
-// User GitHub email
-*/
+  const repoUserSearch = await axios.get(
+    `https://api.github.com/users/${answers.username}`
+  );
+  //console.log(response);
+  let userEmail = "";
+  if (answers.email === "Yes") {
+    userEmail = repoUserSearch.data.email;
+  }
+  let userPicture = "";
+  if (answers.profilePicture === "Yes") {
+    userPicture = repoUserSearch.data.avatar_url;
+  }
+  let markdownFormat = `
+# PROJECT TITLE ${answers.title} ${markdownBadge()}
 
-function generateMarkdown(data) {
-  return `
-# ${data.username}
-# ${data.title}
-# ${data.description}
-# ${data.contents}
-# ${data.installation}
-# ${data.usage}
-# ${data.license}
-# ${data.contributing}
-# ${data.tests}
-# ${data.questions}
+# DESCRIPTION 
+${answers.description}
 
-  
+# INSTALL  
+${answers.installation}
+
+# USAGE    
+${answers.usage}
+
+# LICENSE 
+${answers.license}
+
+# CONTRIBUTORS 
+${answers.contributions}
+
+# TESTING 
+${answers.tests}
+
+
+# Contact
+${answers.email} 
+${answers.profilePicture} 
 `;
+  return markdownFormat;
 }
 
-module.exports = generateMarkdown;
+//console.log(answers.title);
+
+// add the github email also
+
+module.exports = {
+  generateMarkdown,
+};

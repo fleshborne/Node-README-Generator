@@ -2,6 +2,7 @@
 const inquirer = require("inquirer");
 require("dotenv").config();
 const fs = require("fs");
+const markdownFormat = require("./utils/generateMarkdown");
 
 // The user will be prompted for their GitHub username and other information pertaining to the project the README is for.
 
@@ -11,65 +12,83 @@ const questions = [
     type: "input",
     name: "username",
     message: "What is your Github Username?",
+    default: "Fleshborne",
+  },
+  {
+    type: "input",
+    name: "description",
+    message: "Describe your project",
+    default: "app to generate readme markdown files",
   },
   {
     type: "input",
     name: "title",
     message: "What is the title of your project?",
-  },
-  {
-    type: "checkbox",
-    name: "contents",
-    message: "What are the contents of your project?",
-    choices: ["Installation", "Usage", "Tests", "Dependency", "User Info"],
+    default: "Node README generator",
   },
   {
     type: "input",
-    name: "Installation",
+    name: "installation",
     message: "How does the user install your app?",
+    default: "In terminal, run git clone ..., npm install to get dependencies",
   },
   {
     type: "input",
     name: "usage",
     message: "What is the user story?",
+    default: "WHEN the user runs the app, THEN a markdown file is generated",
   },
   {
     type: "input",
     name: "license",
     message: "Which license do you wish to use?",
+    default: "MIT",
   },
   {
     type: "input",
     name: "contributions",
     message: "Who contributed to this project?",
+    default: "Blake Thompson",
   },
   {
     type: "input",
     name: "tests",
     message: "Do you have visuals of your app working?",
+    default: "testing",
   },
   {
-    type: "input",
-    name: "contact",
-    message: "How do we contact developer for questions?",
-    choices: ["Github Profile", "Email"],
+    type: "list",
+    name: "email",
+    message: "Can we add your email?",
+    choices: ["Yes", "No"],
+  },
+  {
+    type: "list",
+    name: "profilePicture",
+    message: "Can we add your profile picture?",
+    choices: ["Yes", "No"],
   },
 ];
-inquirer.prompt(questions).then((answers) => {
-  response = answers;
-  console.log(response);
-  fs.writeFile("README.md", JSON.stringify(answers, null, "\n"), (err) => {
-    if (err) {
-      return console.log(err);
-    }
+const init = () => {
+  inquirer.prompt(questions).then(async (answers) => {
+    //console.log(answers);
 
-    console.log("Success!");
-    // where do I want the file to be place? desktop? local directiory? do I need to check?
-    //create a file name fileName
-    //write to file fileName the data
+    let readmeGenerator = await markdownFormat.generateMarkdown(answers);
+    fs.writeFile("README.md", readmeGenerator, (err) => {
+      if (err) {
+        return console.log(err);
+      }
+
+      console.log("Success!");
+
+      // where do I want the file to be place? desktop? local directory? do I need to check?
+      //create a file name fileName
+      //write to file fileName the data
+    });
   });
-});
-
+};
+// use this to call initialization
+init();
 /*    
 
 // What is your User Github profile picture? [string] (image:url)

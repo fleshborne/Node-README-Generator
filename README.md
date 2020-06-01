@@ -1,20 +1,25 @@
-{
 
-"username": "t",
+# PROJECT TITLE Node README generator [![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](http://commonmark.org)
 
-"title": "t",
+# DESCRIPTION 
+app to generate readme markdown files
 
-"contents": [],
+# INSTALL  
+In terminal, run git clone ..., npm install to get dependencies
 
-"Installation": "t",
+# USAGE    
+WHEN the user runs the app, THEN a markdown file is generated
 
-"usage": "t",
+# LICENSE 
+MIT
 
-"license": "t",
+# CONTRIBUTORS 
+Blake Thompson
 
-"contributions": "t",
+# TESTING 
+testing
 
-"tests": "t",
 
-"contact": "t"
-}
+# Contact
+Yes 
+Yes 
