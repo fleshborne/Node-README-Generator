@@ -11,7 +11,7 @@ const emailMeBadge = () => {
 };
 // cited from : https://ecotrust-canada.github.io/markdown-toc/
 const tableOfContents = () => {
-  return `* [Usage](#usage)\n* [Installation](#install)\n* [License](#license)\n* [Contributors](#contributors)\n* [Tests](#tests)\n* [Sources](#sources)\n* [Contact](#contact)`;
+  return `* [Usage](#usage)\n* [Installation](#install)\n* [License](#license)\n* [Tests](#tests)\n* [Sources](#sources)\n* [Contributions](#contributions)\n* [Contact](#contact)`;
 };
 async function generateMarkdown(answers) {
   // call github repo using axios to await answers and find users github profile
@@ -24,7 +24,8 @@ async function generateMarkdown(answers) {
     userPicture = repoUserSearch.data.avatar_url + ".png";
   }
   let markdownFormat = `
-# PROJECT TITLE ${answers.title} ${markdownBadge()}
+# PROJECT TITLE  ${markdownBadge()}
+\n${answers.title}
 # TABLE OF CONTENTS
 ${tableOfContents()}
 # DESCRIPTION 
@@ -39,19 +40,20 @@ ${answers.usage}
 # LICENSE 
 ${answers.license}
 
-# CONTRIBUTORS ${swagBadge()}
-![profilePicture](${userPicture})
-\n${answers.contributions}
-
 # TESTS
 ${answers.tests}
-
 
 # SOURCES 
 ${answers.sources}
 
-# Contact ${emailMeBadge()}
-${answers.email}
+# CONTRIBUTIONS 
+
+![profilePicture](${userPicture})
+\n${answers.contributions} ${swagBadge()}
+
+# CONTACT 
+\n${emailMeBadge()}
+${answers.contact}
 
 `;
   return markdownFormat;

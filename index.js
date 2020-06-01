@@ -67,7 +67,7 @@ const questions = [
   },
   {
     type: "input",
-    name: "email",
+    name: "contact",
     message: "What email can people contact you at?",
     default: "Blakeathompson94@gmail.com",
   },
