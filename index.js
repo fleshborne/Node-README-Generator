@@ -55,18 +55,21 @@ const questions = [
     type: "input",
     name: "tests",
     message: "Do you have visuals of your app working?",
-    default: "testing",
+    default:
+      "![testing gif](https://github.com/fleshborne/Node-README-Generator/raw/master/Assets/images/2020-06-01_13-24-36.gif)",
   },
   {
     type: "input",
     name: "sources",
     message: "List your sources here, use commas to separate",
+    default:
+      "https://openbase.io/js/inquirer, https://www.makeareadme.com/, https://github.com/Naereen/badges",
   },
   {
-    type: "list",
+    type: "input",
     name: "email",
-    message: "Can we add your email?",
-    choices: ["Yes", "No"],
+    message: "What email can people contact you at?",
+    default: "Blakeathompson94@gmail.com",
   },
   {
     type: "list",

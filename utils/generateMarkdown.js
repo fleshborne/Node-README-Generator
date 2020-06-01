@@ -3,6 +3,9 @@ const axios = require("axios");
 const markdownBadge = () => {
   return "[![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](http://commonmark.org)";
 };
+const emailMeBadge = () => {
+  return "[![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://GitHub.com/Naereen/ama)";
+};
 const tableOfContents = () => {
   return `* [Usage](#usage)\n* [Installation](#install)\n* [License](#license)\n* [Contributors](#contributors)\n* [Tests](#tests)\n* [Sources](#sources)\n* [Contact](#contact)`;
 };
@@ -12,18 +15,12 @@ async function generateMarkdown(answers) {
   const repoUserSearch = await axios.get(
     `https://api.github.com/users/${answers.username}`
   );
-  //console.log(response);
-  let userEmail = "";
-  if (answers.email === "Yes") {
-    userEmail = repoUserSearch.data.email;
-  }
   let userPicture = "";
   if (answers.profilePicture === "Yes") {
-    userPicture = repoUserSearch.data.avatar_url;
+    userPicture = repoUserSearch.data.avatar_url + ".png";
   }
   let markdownFormat = `
 # PROJECT TITLE ${answers.title} ${markdownBadge()}
-
 # TABLE OF CONTENTS
 ${tableOfContents()}
 # DESCRIPTION 
@@ -39,7 +36,8 @@ ${answers.usage}
 ${answers.license}
 
 # CONTRIBUTORS 
-${answers.contributions}
+![profilePicture](${userPicture})
+\n${answers.contributions}
 
 # TESTS
 ${answers.tests}
@@ -48,9 +46,9 @@ ${answers.tests}
 # SOURCES 
 ${answers.sources}
 
-# Contact
-${answers.email} 
-${answers.profilePicture} 
+# Contact ${emailMeBadge()}
+${answers.email}
+
 `;
   return markdownFormat;
 }
@@ -60,5 +58,5 @@ ${answers.profilePicture}
 // add the github email also
 
 module.exports = {
-  generateMarkdown,
+  generateMarkdown: generateMarkdown,
 };

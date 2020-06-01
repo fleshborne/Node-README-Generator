@@ -1,6 +1,5 @@
 
 # PROJECT TITLE Node README generator [![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](http://commonmark.org)
-
 # TABLE OF CONTENTS
 * [Usage](#usage)
 * [Installation](#install)
@@ -22,6 +21,8 @@ WHEN the user runs the app, THEN a markdown file is generated
 MIT
 
 # CONTRIBUTORS 
+![profilePicture](https://avatars0.githubusercontent.com/u/62081154?v=4.png)
+
 Blake Thompson
 
 # TESTS
@@ -29,8 +30,8 @@ Blake Thompson
 
 
 # SOURCES 
- https://openbase.io/js/inquirer, https://www.makeareadme.com/, https://github.com/Naereen/badges
+https://openbase.io/js/inquirer, https://www.makeareadme.com/, https://github.com/Naereen/badges
 
-# Contact
-Yes 
-Yes 
+# Contact [![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://GitHub.com/Naereen/ama)
+Blakeathompson94@gmail.com
+
