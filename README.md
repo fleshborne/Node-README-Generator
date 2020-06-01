@@ -3,11 +3,11 @@
 
 # TABLE OF CONTENTS
 * [Usage](#usage)
-* [Installation](#installation)
+* [Installation](#install)
 * [License](#license)
 * [Tests](#tests)
 * [Contributors](#contributors)
-* [Questions](#questions)
+* [Contact](#contact)
 # DESCRIPTION 
 app to generate readme markdown files
 
@@ -23,7 +23,7 @@ MIT
 # CONTRIBUTORS 
 Blake Thompson
 
-# TESTING 
+# TESTS
 testing
 
 
