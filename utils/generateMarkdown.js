@@ -3,6 +3,9 @@ const axios = require("axios");
 const markdownBadge = () => {
   return "[![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](http://commonmark.org)";
 };
+const tableOfContents = () => {
+  return `* [Usage](#usage)\n* [Installation](#installation)\n* [License](#license)\n* [Tests](#tests)\n* [Contributors](#contributors)\n* [Questions](#questions)`;
+};
 async function generateMarkdown(answers) {
   // call github repo using axios to await answers and find users github profile
 
@@ -21,6 +24,8 @@ async function generateMarkdown(answers) {
   let markdownFormat = `
 # PROJECT TITLE ${answers.title} ${markdownBadge()}
 
+# TABLE OF CONTENTS
+${tableOfContents()}
 # DESCRIPTION 
 ${answers.description}
 

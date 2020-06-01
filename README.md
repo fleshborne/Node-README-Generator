@@ -1,6 +1,13 @@
 
 # PROJECT TITLE Node README generator [![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](http://commonmark.org)
 
+# TABLE OF CONTENTS
+* [Usage](#usage)
+* [Installation](#installation)
+* [License](#license)
+* [Tests](#tests)
+* [Contributors](#contributors)
+* [Questions](#questions)
 # DESCRIPTION 
 app to generate readme markdown files
 
