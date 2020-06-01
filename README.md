@@ -12,7 +12,7 @@
 app to generate readme markdown files
 
 # INSTALL  
-In terminal, run `git clone git@github.com:fleshborne/Node-README-Generator.git`, then `npm install` to get dependencies
+In terminal, run `git clone git@github.com:fleshborne/Node-README-Generator.git`, then `npm install` to get dependencies, after which user must run `node index.js`
 
 # USAGE    
 WHEN the user runs the app, THEN a markdown file is generated

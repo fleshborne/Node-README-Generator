@@ -1,5 +1,5 @@
 const axios = require("axios");
-
+// cited from : https://github.com/Naereen/badges
 const markdownBadge = () => {
   return "[![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](http://commonmark.org)";
 };
@@ -9,6 +9,7 @@ const swagBadge = () => {
 const emailMeBadge = () => {
   return "[![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://GitHub.com/fleshborne)";
 };
+// cited from : https://ecotrust-canada.github.io/markdown-toc/
 const tableOfContents = () => {
   return `* [Usage](#usage)\n* [Installation](#install)\n* [License](#license)\n* [Contributors](#contributors)\n* [Tests](#tests)\n* [Sources](#sources)\n* [Contact](#contact)`;
 };
