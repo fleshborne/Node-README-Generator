@@ -35,9 +35,14 @@ MIT
 
 # SOURCES
 
-[Inquirer](https://openbase.io/js/inquirer)\n
-[Readme-Template](https://www.makeareadme.com/)\n
-[Badges](https://github.com/Naereen/badges)\n[Table-of-Contents-Template](https://ecotrust-canada.github.io/markdown-toc/)\n
+[Inquirer](https://openbase.io/js/inquirer)
+
+[Readme-Template](https://www.makeareadme.com/)
+
+[Badges](https://github.com/Naereen/badges)
+
+[Table-of-Contents-Template](https://ecotrust-canada.github.io/markdown-toc/)
+
 [Axios](https://www.npmjs.com/package/axios)
 
 # CONTRIBUTIONS
