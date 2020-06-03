@@ -13,6 +13,12 @@ const emailMeBadge = () => {
 const tableOfContents = () => {
   return `* [Description](#description)\n* [Installation](#install)\n* [Usage](#usage)\n* [License](#license)\n* [Tests](#tests)\n* [Sources](#sources)\n* [Contributions](#contributions)\n* [Contact](#contact)`;
 };
+const sourcesStuff = (sources) => {
+  const sourcesArray = sources.split(",");
+  return sourcesArray.map((source) => {
+    return `[${source}](${source})\n`;
+  });
+};
 async function generateMarkdown(answers) {
   // call github repo using axios to await answers and find users github profile
 
@@ -44,15 +50,15 @@ ${answers.license}
 ${answers.tests}
 
 # SOURCES 
-${answers.sources}
+${sourcesStuff(answers.sources)}
 
 # CONTRIBUTIONS 
 
 ![profilePicture](${userPicture})
-\n${answers.contributions} ${swagBadge()}
+${answers.contributions} ${swagBadge()}
 
 # CONTACT 
-\n${emailMeBadge()}
+${emailMeBadge()}
 ${answers.contact}
 
 `;
